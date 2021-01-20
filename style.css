@@ -1,5 +1,5 @@
 /* To restrict padding from taking up extra height or extra width do box-sizing: border-box */
-
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
 html {
   box-sizing: border-box;
 }
@@ -7,4 +7,68 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
+  font-family: "Bebas Neue", cursive, sans-serif;
+  background: rgb(104, 250, 250);
+}
+
+h1 {
+  position: sticky;
+  z-index: 100;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  letter-spacing: 5px;
+  background: rgba(255, 0, 0, 0.2);
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Loader */
+
+.loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+/* child of .loader class here it is image element CSS Trick : parent child {} */
+.loader img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Image Container */
+
+.image-container {
+  margin: 10px 30%;
+  margin-top: 70px;
+}
+
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+  object-fit: cover;
+  height: 70vh;
+}
+
+/* Media Query : Large Smartphone */
+@media screen and (max-width: 600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .image-container {
+    margin: 10px;
+    margin-top: 60px;
+  }
 }
